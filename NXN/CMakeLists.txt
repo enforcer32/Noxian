@@ -1,0 +1,7 @@
+file(GLOB_RECURSE NXNSources
+	"${CMAKE_CURRENT_SOURCE_DIR}/NXN.h"
+	"${CMAKE_CURRENT_SOURCE_DIR}/NXN.cpp"
+)
+
+add_library(${NXN_TARGET_NAME} STATIC ${NXNSources})
+target_include_directories(${NXN_TARGET_NAME} PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/../")
